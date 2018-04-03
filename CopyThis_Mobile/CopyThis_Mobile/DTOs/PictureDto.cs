@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace CopyThisServer.Model.Server.Data
+namespace CopyThis_Mobile.DTOs
 {
     [JsonObject(MemberSerialization.OptIn)]
     internal class PictureDto

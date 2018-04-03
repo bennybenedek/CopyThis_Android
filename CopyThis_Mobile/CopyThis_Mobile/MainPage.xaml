@@ -2,40 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CopyThis_Mobile"
+             xmlns:vm="clr-namespace:CopyThis_Mobile.ViewModels;assembly=CopyThis_Mobile"
              x:Class="CopyThis_Mobile.MainPage">
 
-    <Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <StackLayout.BindingContext>
+            <vm:MainViewModel/>
+        </StackLayout.BindingContext>
 
-    <Button Text="Send Clipboard"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
-            Clicked="OnSendClipboardClicked"/>
+        <Label Text="Welcome to Xamarin.Forms!" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" />
 
-    <EditText
-            text="{Binding Ip}"
-            textAppearance="?android:attr/textAppearanceMedium"
-            layout_width="120dp"
-            layout_height="30dp"
-            gravity="left"
-             id="@+id/ip" />
+        <Button Text="Send Clipboard"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Command="{Binding SendClipboardCommand}"/>
 
-    <EditText
-            text="{Binding Port}"
-            textAppearance="?android:attr/textAppearanceMedium"
-            layout_width="120dp"
-            layout_height="30dp"
-            gravity="left"
-            id="@+id/port" />
+        <Entry Text="{Binding Ip}" Placeholder="IP Address"/>
 
-    <EditText
-            text="{Binding Secret}"
-            textAppearance="?android:attr/textAppearanceMedium"
-            layout_width="120dp"
-            layout_height="30dp"
-            gravity="left"
-            id="@+id/secret" />
+        <Entry Text="{Binding Port}" Placeholder="Port"/>
 
+        <Entry Text="{Binding Secret}" Placeholder="Secret"/>
+    </StackLayout>
+    
 
 </ContentPage>

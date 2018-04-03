@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace CopyThisServer.Model.Server.Data
+namespace CopyThis_Mobile.DTOs
 {
     [JsonObject(MemberSerialization.OptIn)]
     internal class StatusDto
