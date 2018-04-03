@@ -10,20 +10,21 @@
             <vm:MainViewModel/>
         </StackLayout.BindingContext>
 
-        <Label Text="Welcome to Xamarin.Forms!" 
-               VerticalOptions="Center" 
-               HorizontalOptions="Center" />
+        <Entry Text="{Binding Ip}" Placeholder="IP Address"/>
+
+        <Entry Text="{Binding Port}" Placeholder="Port"/>
+
+        <Entry Text="{Binding Secret}" Placeholder="Secret"/>
 
         <Button Text="Send Clipboard"
                 HorizontalOptions="Center"
                 VerticalOptions="CenterAndExpand"
                 Command="{Binding SendClipboardCommand}"/>
 
-        <Entry Text="{Binding Ip}" Placeholder="IP Address"/>
-
-        <Entry Text="{Binding Port}" Placeholder="Port"/>
-
-        <Entry Text="{Binding Secret}" Placeholder="Secret"/>
+        <Button Text="Send Picture"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Command="{Binding SendPictureCommand}"/>
     </StackLayout>
     
 
