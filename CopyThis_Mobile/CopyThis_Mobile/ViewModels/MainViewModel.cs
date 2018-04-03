@@ -7,7 +7,6 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using CopyThis_Mobile.DTOs;
 using Newtonsoft.Json;
 using Plugin.Clipboard;
 using Xamarin.Forms;
